@@ -14,7 +14,7 @@
             <h1>&nsc; ビスワスのホームページ</h1>
             <!-- <img src="" alt=""> -->
             <nav>
-                <h3>ナビゲーション(タイトルから飛ぶ）</h3>
+                <h3>ナビゲーション（タイトルから飛ぶ）</h3>
                 <ul>
                 <li>
                     <a href="#intro">自己紹介</a>
@@ -32,7 +32,7 @@
                     <a href="#futuredream">将来の夢</a>
                 </li>
                 <li>
-                    <a href="#survey">個人情報入力</a>
+                    <a href="#survey">感想やメッセージ</a>
                 </li>
                 </ul>
             </nav>
@@ -110,33 +110,31 @@
                 やりたいことがすごく明確なわけではないが、まずは手に職をつけ、立派な社会人になりたいと考えている。そのうえでビジネスについても学習をし、お金の稼ぎ方をよく学び、最終的に自分で事業を立ち上げるか、誰かの事業を引き受け、展開していくどで富豪を目指そうと考えている。
             </p>
             </article>
+            <br>
 
             <hr>
 
             <article id="survey">
-                <h2>個人情報入力</h2>
-                <p>
-                    適当にアンケート作るからやっといて。<br>
-                    (サーバーまだないから誰もできねーけどな。サーバーのやり取りの知識もまだない笑)
-                </p>
 
-                <fieldset>
-                    <legend>Personal Information</legend>
+                <h2>ぜひ感想を聞かせてください！</h2>
+
+                <form action="https://httpbin.org/get" method="get">
+                
+                    <label for="message">メッセージや感想</label>
+                    <br>
+                    <textarea name="message" id="message" cols="60" rows="16"></textarea>
+                    <br>
+                    <br>
+                    <fieldset>
+                    <legend>発信者の情報（名前以外は任意！）</legend>
                     <p>
-                        苗字と名前の間にスペース入れましょう！<br>
-                        <label for="lastname">氏:</label>
-                        <input type="text" name="lastname" id="lastname" placeholder="田中" required autofocus>
+                        <label for="name">名前（仮名）:</label>
+                        <input type="text" name="name" id="name" placeholder="田中 太郎" required >
 
-                        <label for="firstname">名:</label>
-                        <input type="text" name="firstname" id="firstname" placeholder="太郎" required>
                     </p>
                     <p>
                         <label for="email">メールアドレス:</label>
                         <input type="text" name="email" id="email" placeholder="abcde123@xxmail.com" >
-                    </p>
-                    <p>
-                        <label for="password">パスワード</label>
-                        <input type="password" name="password" id="password" placeholder="Abcd123">
                     </p>
                     <p>
                         <label for="phone">電話番号</label>
@@ -144,7 +142,7 @@
                     </p>
                     <p>
                         <label for="country">国籍</label>
-                        <span style="color: red !important; display: inline; float: none;">*</span>
+                        <!-- <span style="color: red !important; display: inline; float: none;"></span> -->
                         <select id="country" name="country" class="form-control">
                             <option value="Afghanistan">Afghanistan</option>
                             <option value="Åland Islands">Åland Islands</option>
@@ -391,10 +389,17 @@
                             <option value="Zambia">Zambia</option>
                             <option value="Zimbabwe">Zimbabwe</option>
                         </select>
+                        
                     </p>
 
-
-                </fieldset>
+                    <button type="submit">submit</button>
+                    <!-- submit だとURLで入力情報見えちゃう -->
+                    <button type="submit" formaction="https://httpbin.org/post" formmethod="post">post</button>
+                    <!-- post だと情hプがURLで見えない -->
+                    <button type="reset">reset</button>
+                    </fieldset>
+                    
+                </form>
                 <!-- <form action="https://httpbin.org/get" method="get"> -->
 
 
