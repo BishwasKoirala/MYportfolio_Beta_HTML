@@ -1,5 +1,3 @@
 # HTML_begining_project
-just messing around with things I have been learning about Html recently
+creared my first webpage by watching freecodecamp's Dave's video
 
-2023/03/08
-added some forums
